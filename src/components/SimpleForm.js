@@ -1,7 +1,3 @@
-const tissueOptions = [
-  { value: 1, parentValue: null, label: 'Germany' },
-  { value: 2, parentValue: null, label: 'USA' },
-]
 
 export const FormRequestCreation = (handleClose) => {
   const formDefinition = {
@@ -42,7 +38,8 @@ export const FormRequestCreation = (handleClose) => {
         blankString: 'None',
         // multiline: true,
         // fullWidth: true,
-        options: tissueOptions,
+        options: null,
+        block: false
       },
       {
         name: 'crop',
@@ -53,7 +50,7 @@ export const FormRequestCreation = (handleClose) => {
         blankString: 'None',
         // multiline: true,
         // fullWidth: true,
-        options: tissueOptions,
+        options: null,
         block: false
       },
       {
@@ -65,7 +62,7 @@ export const FormRequestCreation = (handleClose) => {
         blankString: 'None',
         // multiline: true,
         // fullWidth: true,
-        options: tissueOptions,
+        options: null,
       },
       {
         name: 'requester',
@@ -77,6 +74,7 @@ export const FormRequestCreation = (handleClose) => {
         name: 'requesterMail',
         component: 'EmailField',
         label: 'Requester Email',
+        block: false
       },
       {
         name: 'contact',
@@ -123,7 +121,7 @@ export const FormRequestCreation = (handleClose) => {
         blankString: 'None',
         // multiline: true,
         // fullWidth: true,
-        options: tissueOptions,
+        options: null,
         block: false
       },
       {
@@ -132,7 +130,8 @@ export const FormRequestCreation = (handleClose) => {
         label: 'Service Provider',
         help: 'Select one',
         blankString: 'None',
-        options: tissueOptions
+        options: null,
+        block: false
       },
       {
         name: 'purpose',
@@ -140,7 +139,7 @@ export const FormRequestCreation = (handleClose) => {
         label: 'Purpose',
         help: 'Select one',
         blankString: 'None',
-        options: tissueOptions,
+        options: null,
         block: false
       },
       {
@@ -149,7 +148,8 @@ export const FormRequestCreation = (handleClose) => {
         label: 'Objective',
         help: 'Select one',
         blankString: 'None',
-        options: tissueOptions
+        options: null,
+        block: false
       },
       {
         name: 'textField',
