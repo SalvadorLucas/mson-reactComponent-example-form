@@ -68,13 +68,15 @@ export const FormRequestCreation = (handleClose) => {
         name: 'requester',
         component: 'TextField',
         label: 'Requester',
-        block: false
+        block: false,
+        value: localStorage.getItem('userProfile')?localStorage.getItem('userProfile').name:'Salvador Ortega'
       },
       {
         name: 'requesterMail',
         component: 'EmailField',
         label: 'Requester Email',
-        block: false
+        block: false,
+        value: localStorage.getItem('userProfile')?localStorage.getItem('userProfile').name:'s.ortega@cimmyt.org'
       },
       {
         name: 'contact',

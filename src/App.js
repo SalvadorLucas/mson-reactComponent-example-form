@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-
+import GridDefinition from './components/exapleGrid'
 export default class App extends React.Component {
   constructor(props){
     super(props)
@@ -35,6 +35,9 @@ export default class App extends React.Component {
               onMount={({ component })=>{
   
               }}
+              onSearch={({component})=>{
+                console.log(component.getValues());
+              }}
               onSubmit={({ component }) => {
                 alert(JSON.stringify(component.getValues()));
               }}
@@ -44,6 +47,16 @@ export default class App extends React.Component {
             />
           </DialogContent>
         </Dialog>
+        <Component
+          definition={GridDefinition}
+          onMount={({component})=>{
+            console.log(component)
+          }}
+          onSubmit={({ component }) => {
+            console.log(component.getValues());
+            
+          }}
+          />
       </div>
     )
   }
@@ -58,10 +71,6 @@ export default class App extends React.Component {
     this.setState({
       open:false
     })
-  }
-
-  componentDidMount(){
-    
   }
 }
 
